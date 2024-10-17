@@ -82,7 +82,6 @@ class _ProductItemScreenState extends State<ProductItemScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Product name
                       Text(
                         "Product Name",
                         style: TextStyle(
@@ -91,7 +90,6 @@ class _ProductItemScreenState extends State<ProductItemScreen> {
                         ),
                       ),
                       const SizedBox(height: 8),
-                      // Company name
                       Text(
                         "Company Name",
                         style: TextStyle(
@@ -100,7 +98,6 @@ class _ProductItemScreenState extends State<ProductItemScreen> {
                         ),
                       ),
                       const SizedBox(height: 16),
-                      // Favorite button
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -120,17 +117,14 @@ class _ProductItemScreenState extends State<ProductItemScreen> {
                         ],
                       ),
                       const SizedBox(height: 16),
-                      // Description
                       Text(
                         "Product Description: This is a detailed description of the product. It includes features, materials, and other important details that make the product unique.",
                         style: TextStyle(fontSize: 16),
                       ),
                       const SizedBox(height: 16),
-                      // Price and quantity control
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          // Price
                           Text(
                             "\$${(50 * _quantity).toStringAsFixed(2)}",
                             style: TextStyle(
@@ -139,7 +133,6 @@ class _ProductItemScreenState extends State<ProductItemScreen> {
                               color: Colors.blueAccent,
                             ),
                           ),
-                          // Quantity control
                           Row(
                             children: [
                               IconButton(
@@ -169,7 +162,6 @@ class _ProductItemScreenState extends State<ProductItemScreen> {
                               ),
                             ],
                           ),
-                          // Cart icon
                           IconButton(
                             onPressed: () {
                               ScaffoldMessenger.of(context).showSnackBar(
@@ -190,7 +182,6 @@ class _ProductItemScreenState extends State<ProductItemScreen> {
                 ),
               ],
             ),
-            // Back button
             Positioned(
               top: 16,
               left: 16,

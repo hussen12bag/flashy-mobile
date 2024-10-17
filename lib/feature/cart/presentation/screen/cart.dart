@@ -35,7 +35,6 @@ class _CartScreenState extends State<CartScreen> {
       'quantity': 2,
       'image': 'assets/images/placeholder.png',
     },
-    // New data
     {
       'name': 'The Ordinary Niacinamide',
       'description': '10% + Zinc',
@@ -79,7 +78,6 @@ class _CartScreenState extends State<CartScreen> {
     });
   }
 
-  // Function to show confirmation dialog
   void _showClearCartDialog() {
     showDialog(
       context: context,
@@ -90,16 +88,13 @@ class _CartScreenState extends State<CartScreen> {
           actions: [
             TextButton(
               onPressed: () {
-                // If user chooses "Yes"
                 _clearCart();
-                Navigator.of(context).pop(); // Close dialog
               },
               child: Text('Yes'),
             ),
             TextButton(
               onPressed: () {
-                // If user chooses "No"
-                Navigator.of(context).pop(); // Close dialog
+                Navigator.of(context).pop();
               },
               child: Text('No'),
             ),
@@ -148,7 +143,6 @@ class _CartScreenState extends State<CartScreen> {
               ),
             ),
             SizedBox(height: AppHeightManager.h02),
-
             ListView.builder(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
@@ -200,23 +194,19 @@ class _CartScreenState extends State<CartScreen> {
                             ],
                           ),
                         ),
-                        // Quantity counter
                         Column(
                           children: [
-                            // Remove product button
                             IconButton(
                               onPressed: () => _removeProduct(index),
                               icon: Icon(Icons.delete,
-                                  color: AppColorManager
-                                      .red), // Product remove button
+                                  color: AppColorManager.red),
                             ),
                             Row(
                               children: [
                                 IconButton(
                                   onPressed: () => _incrementQuantity(index),
                                   icon: Icon(Icons.add,
-                                      color: AppColorManager
-                                          .grey), // Increase button
+                                      color: AppColorManager.grey),
                                 ),
                                 AppTextWidget(
                                   text: '${product['quantity'] ?? 1}',
@@ -225,8 +215,7 @@ class _CartScreenState extends State<CartScreen> {
                                 IconButton(
                                   onPressed: () => _decrementQuantity(index),
                                   icon: Icon(Icons.remove,
-                                      color: AppColorManager
-                                          .grey), // Decrease button
+                                      color: AppColorManager.grey),
                                 ),
                               ],
                             ),
@@ -238,9 +227,7 @@ class _CartScreenState extends State<CartScreen> {
                 );
               },
             ),
-
             SizedBox(height: AppHeightManager.h10),
-            // Total price
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -260,9 +247,7 @@ class _CartScreenState extends State<CartScreen> {
                   ],
                 ),
                 ElevatedButton(
-                  onPressed: () {
-                    // Proceed to checkout
-                  },
+                  onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColorManager.black,
                     padding: EdgeInsets.symmetric(

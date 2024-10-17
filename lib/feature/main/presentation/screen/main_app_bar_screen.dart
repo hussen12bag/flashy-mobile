@@ -91,7 +91,6 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                       ],
                     ),
                   ),
-                  // قسم الفئات
                   InkWell(
                     overlayColor: const MaterialStatePropertyAll(
                         AppColorManager.transparent),
@@ -117,7 +116,6 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                       ],
                     ),
                   ),
-                  // صفحة الكارت
                   InkWell(
                     overlayColor: const MaterialStatePropertyAll(
                         AppColorManager.transparent),
@@ -143,7 +141,6 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                       ],
                     ),
                   ),
-                  // صفحة المزيد
                   InkWell(
                     overlayColor: const MaterialStatePropertyAll(
                         AppColorManager.transparent),
